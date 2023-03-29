@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -185,10 +186,14 @@ public class Enemy : MonoBehaviour
     }
     private void ResetBoard()
     {
-        foreach(GameObject block in blocksInPlay)
+        GameObject[] blocks = blocksInPlay.ToArray();
+
+        foreach(GameObject block in blocks)
         {
             RemoveBlock(block);
         }
+
+        blocksInPlay = blocks.ToList();
     }
     public void MoveLayers(float distY)
     {

@@ -44,6 +44,8 @@ public class BallSpawner : MonoBehaviour
         shootLine = gameObject.GetComponent<LineRenderer>();
         shootLine.SetPosition(0, transform.position);
         shootLine.SetPosition(1, transform.position);
+        shootLine.startColor = new Color(207, 199, 182);
+        shootLine.endColor = new Color(207, 199, 182, 0);
 
         numBallsInPlay = 0;
 

@@ -54,6 +54,8 @@ public class EnemySpawner : MonoBehaviour
             maxBlockHp += 2;
             nextEnemy.SetMaxBlockHp(maxBlockHp);
         }
+
+        Time.timeScale = 1;
     }
     public IEnumerator SpawnBasicEnemy(float time)
     {

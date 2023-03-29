@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    //controls the state of the game
     public enum GameState { GameStart, PlayerTurn, EnemyTurn, PlayerWin, PlayerLose, GameEnd}
 
     [SerializeField]
