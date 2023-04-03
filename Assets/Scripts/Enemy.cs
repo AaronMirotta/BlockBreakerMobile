@@ -61,6 +61,8 @@ public class Enemy : MonoBehaviour
     {
         if(gameController.GetState() == GameController.GameState.EnemyTurn)
         {
+            Time.timeScale = 1f;
+
             if(enemyHealth <= 0)
             {
                 //player Win
